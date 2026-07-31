@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dean Engineering — Residential Structural Engineering in Eugene, Oregon</title>
+<meta name="description" content="Dean Engineering is a small, local structural engineering firm in Eugene, Oregon. Work directly with Wyatt Dean, PE — new construction, ADUs, additions, remodels, and retaining walls. Free consult, no pressure.">
+<meta name="theme-color" content="#1d4737">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1d4737;
+    --green-deep: #163829;
+    --amber: #c08a2e;
+    --cream: #faf7f0;
+    --cream-dark: #f3eee2;
+    --ink: #232323;
+    --ink-soft: #4a4a45;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- header ---------- */
+  header {
+    padding: 28px 0 20px;
+  }
+  .header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .brand img {
+    width: 92px;
+    height: auto;
+  }
+  .brand-lines {
+    font-family: "Archivo", sans-serif;
+    color: var(--green);
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+  .brand-lines .sub {
+    color: var(--ink-soft);
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    font-size: 0.68rem;
+  }
+  .header-contact {
+    text-align: right;
+    font-family: "Archivo", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.9;
+  }
+  .header-contact a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .header-contact a:hover { color: var(--amber); }
+
+  /* ---------- hero ---------- */
+  .hero {
+    padding: 64px 0 72px;
+  }
+  .hero .wrap { text-align: center; }
+  .hero h1 {
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.4rem, 6vw, 3.9rem);
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    max-width: 16ch;
+    margin: 0 auto;
+  }
+  .hero h1 .accent { color: var(--green); }
+  .hero p.lede {
+    margin: 28px auto 0;
+    max-width: 56ch;
+    font-size: 1.17rem;
+    color: var(--ink-soft);
+  }
+  .hero p.lede strong { color: var(--ink); }
+  .cta-row {
+    margin-top: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    padding: 14px 26px;
+    border-radius: 3px;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .btn-green {
+    background: var(--green);
+    color: var(--cream);
+  }
+  .btn-green:hover { background: var(--green-deep); }
+  .btn-ghost {
+    color: var(--green);
+    border: 2px solid var(--green);
+    padding: 12px 24px;
+  }
+  .btn-ghost:hover { color: var(--amber); border-color: var(--amber); }
+  .cta-note {
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+  }
+
+  /* ---------- section label ---------- */
+  section { padding: 64px 0; }
+  .kicker {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 34px;
+  }
+  .kicker .tri {
+    color: var(--amber);
+    font-size: 1.05rem;
+    line-height: 1;
+  }
+  .kicker h2 {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .kicker .rule {
+    flex: 1;
+    height: 1px;
+    background: #d8d2c2;
+  }
+
+  /* ---------- services ---------- */
+  .services { background: var(--cream-dark); }
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 48px;
+  }
+  .service {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+    padding: 10px 0 16px;
+  }
+  /* rule pinned to the bottom of the (stretched) grid cell so it aligns
+     across columns even when neighbors wrap to different line counts */
+  .service::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: #e0dac9;
+  }
+  .service .tri { color: var(--amber); font-size: 0.85rem; }
+  .service .name {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+  .service .desc {
+    display: block;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 400;
+    font-size: 0.98rem;
+    color: var(--ink-soft);
+    margin-top: 3px;
+  }
+
+  /* ---------- why ---------- */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 44px;
+  }
+  .why .num {
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    color: var(--amber);
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+  }
+  .why h3 {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 1.18rem;
+    margin: 6px 0 10px;
+    color: var(--ink);
+  }
+  .why p { color: var(--ink-soft); font-size: 1rem; }
+
+  /* ---------- about ---------- */
+  .about {
+    background: var(--green);
+    color: var(--cream);
+  }
+  .about .kicker h2 { color: var(--cream); }
+  .about .kicker .rule { background: rgba(250, 247, 240, 0.25); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .about p {
+    font-size: 1.12rem;
+    color: rgba(250, 247, 240, 0.92);
+  }
+  .about p + p { margin-top: 18px; }
+  .about-card {
+    border: 1px solid rgba(250, 247, 240, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .about-card .portrait {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: 50% 28%;
+  }
+  .about-card-body { padding: 24px 28px 28px; }
+  .about-card .name {
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: 1.35rem;
+    color: var(--cream);
+  }
+  .about-card .role {
+    font-style: italic;
+    color: rgba(250, 247, 240, 0.85);
+    margin-top: 6px;
+  }
+  .about-card .creds {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(250, 247, 240, 0.25);
+    font-family: "Archivo", sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber);
+    line-height: 2;
+  }
+
+  /* ---------- contact ---------- */
+  .contact { padding: 96px 0; }
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .contact h2.big {
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.7rem, 3.6vw, 2.4rem);
+    line-height: 1.15;
+    color: var(--ink);
+  }
+  .contact p.invite {
+    margin-top: 16px;
+    font-size: 1.12rem;
+    font-style: italic;
+    color: var(--ink-soft);
+    max-width: 44ch;
+  }
+  .contact-lines {
+    font-family: "Archivo", sans-serif;
+    text-align: right;
+    line-height: 2.3;
+  }
+  .contact-lines a {
+    text-decoration: none;
+    color: var(--green);
+    font-weight: 700;
+    font-size: 1.15rem;
+  }
+  .contact-lines a:hover { color: var(--amber); }
+  .contact-lines .domain {
+    color: var(--amber);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+  }
+
+  /* ---------- footer ---------- */
+  footer {
+    background: var(--green-deep);
+    color: rgba(250, 247, 240, 0.75);
+    font-family: "Archivo", sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    padding: 26px 0;
+  }
+  footer .wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 950px) {
+    .why-grid { grid-template-columns: 1fr; gap: 32px; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-card { max-width: 480px; }
+  }
+  @media (max-width: 780px) {
+    .header-contact { display: none; }
+    .service-grid, .contact-inner { grid-template-columns: 1fr; }
+    .contact-lines { text-align: left; }
+    .hero { padding: 44px 0 56px; }
+    section { padding: 46px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <div class="brand">
+      <img src="assets/logo.png?v=3" alt="Dean Engineering logo — craftsman garage" width="735" height="672">
+      <div class="brand-lines">
+        Residential<br>Structural<br>Engineering
+        <div class="sub">Eugene, Oregon &middot; Licensed PE</div>
+      </div>
+    </div>
+    <div class="header-contact">
+      <a href="tel:+15414102162">541-410-2162</a><br>
+      <a href="mailto:wyatt@deanengr.com">wyatt@deanengr.com</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Dream it. Build it. <span class="accent">We&rsquo;ll make sure it stands.</span></h1>
+      <p class="lede">Dean Engineering is a small, local firm — and that&rsquo;s the point. When you call, you talk to <strong>the licensed engineer doing your design</strong>. No project managers, no phone tag, no waiting weeks for answers. Just an engineer who&rsquo;s genuinely excited to help you build the home you&rsquo;ve been dreaming about.</p>
+      <div class="cta-row">
+        <a class="btn btn-green" href="tel:+15414102162">Call Wyatt</a>
+        <a class="btn btn-ghost" href="mailto:wyatt@deanengr.com">Send an Email</a>
+        <span class="cta-note">Free consult, no pressure.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="tri">&#9650;</span>
+      <h2>Services</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="service-grid">
+      <div class="service"><span class="tri">&#9650;</span><div><span class="name">New Construction</span><span class="desc">Full structural design for custom homes — foundation to roof.</span></div></div>
+      <div class="service"><span class="tri">&#9650;</span><div><span class="name">ADUs &amp; Accessory Structures</span><span class="desc">Backyard cottages, shops, garages, and studios.</span></div></div>
+      <div class="service"><span class="tri">&#9650;</span><div><span class="name">Middle Housing</span><span class="desc">Duplexes, triplexes, and cottage clusters under Oregon&rsquo;s new rules.</span></div></div>
+      <div class="service"><span class="tri">&#9650;</span><div><span class="name">Additions &amp; Remodels</span><span class="desc">Open up walls, add a story, or extend — safely and to code.</span></div></div>
+      <div class="service"><span class="tri">&#9650;</span><div><span class="name">Retaining Walls</span><span class="desc">Site-specific designs that hold the hillside where it belongs.</span></div></div>
+      <div class="service"><span class="tri">&#9650;</span><div><span class="name">On-Call Support for Builders &amp; Contractors</span><span class="desc">Quick answers, site visits, and fixes when the job can&rsquo;t wait.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">
+      <span class="tri">&#9650;</span>
+      <h2>Why Dean Engineering</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="why-grid">
+      <div class="why">
+        <div class="num">01</div>
+        <h3>Direct access to your engineer</h3>
+        <p>You work with the engineer — start to finish. Straight answers and full transparency at every step.</p>
+      </div>
+      <div class="why">
+        <div class="num">02</div>
+        <h3>Local expertise</h3>
+        <p>Oregon codes, Oregon plans examiners, Oregon inspectors. We know how to get projects approved here.</p>
+      </div>
+      <div class="why">
+        <div class="num">03</div>
+        <h3>Driven to build your dream</h3>
+        <p>We&rsquo;re passionate about turning ideas into homes that last.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="tri">&#9650;</span>
+      <h2>The Engineer</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p>I started Dean Engineering for a simple reason: I love houses — and the people who dream them up. Watching an idea become drawings, then a frame, then a home somebody lives their life in never gets old, and engineering the part that holds it all up is the best seat in the house.</p>
+        <p>That&rsquo;s why this firm doesn&rsquo;t feel like a call center. Every project gets a licensed engineer who reads the plans, runs the numbers, and picks up the phone when you have questions. Whether you&rsquo;re a homeowner sketching an addition on a napkin or a builder who needs a beam sized by Friday — we&rsquo;d love to be part of the dream you&rsquo;re building.</p>
+      </div>
+      <div class="about-card">
+        <img class="portrait" src="assets/family.jpg" alt="Wyatt Dean with his family in an autumn Oregon field" width="1400" height="2100" loading="lazy">
+        <div class="about-card-body">
+          <div class="name">Wyatt Dean, PE</div>
+          <div class="role">Owner &amp; Engineer — proud to call Eugene home.</div>
+          <div class="creds">Licensed PE &middot; Oregon<br>Residential Structural</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-inner">
+    <div>
+      <h2 class="big">Planning a new build or addition?</h2>
+      <p class="invite">Come say hi — I&rsquo;d love to hear about your project. Free consult, no pressure.</p>
+    </div>
+    <div class="contact-lines">
+      <a href="tel:+15414102162">541-410-2162</a><br>
+      <a href="mailto:wyatt@deanengr.com">wyatt@deanengr.com</a><br>
+      <span class="domain">deanengr.com</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Dean Engineering, LLC &middot; Eugene, Oregon</span>
+    <span>Residential Structural Engineering &middot; Licensed PE</span>
+  </div>
+</footer>
+
+</body>
+</html>
