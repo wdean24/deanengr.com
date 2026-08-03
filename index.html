@@ -6,7 +6,71 @@
 <title>Dean Engineering — Residential Structural Engineering in Eugene, Oregon</title>
 <meta name="description" content="Dean Engineering is a small, local structural engineering firm in Eugene, Oregon. Work directly with Wyatt Dean, PE — new construction, ADUs, additions, remodels, and retaining walls. Free consult, no pressure.">
 <meta name="theme-color" content="#1d4737">
-<link rel="icon" href="assets/logo.png">
+<link rel="canonical" href="https://deanengr.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dean Engineering">
+<meta property="og:title" content="Dean Engineering — Residential Structural Engineering in Eugene, Oregon">
+<meta property="og:description" content="Work directly with Wyatt Dean, PE — new construction, ADUs, additions, remodels, and retaining walls. Free consult, no pressure.">
+<meta property="og:url" content="https://deanengr.com/">
+<meta property="og:image" content="https://deanengr.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dean Engineering — Residential Structural Engineering in Eugene, Oregon">
+<meta name="twitter:description" content="Work directly with Wyatt Dean, PE — new construction, ADUs, additions, remodels, and retaining walls. Free consult, no pressure.">
+<meta name="twitter:image" content="https://deanengr.com/assets/og-image.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://deanengr.com/#business",
+  "name": "Dean Engineering, LLC",
+  "url": "https://deanengr.com/",
+  "logo": "https://deanengr.com/assets/logo.png",
+  "image": "https://deanengr.com/assets/og-image.png",
+  "telephone": "+1-541-410-2162",
+  "email": "wyatt@deanengr.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Eugene",
+    "addressRegion": "OR",
+    "postalCode": "97404",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Eugene"},
+    {"@type": "City", "name": "Springfield"},
+    {"@type": "City", "name": "Coburg"},
+    {"@type": "City", "name": "Junction City"},
+    {"@type": "City", "name": "Florence"},
+    {"@type": "AdministrativeArea", "name": "Lane County"}
+  ],
+  "description": "Dean Engineering is a small, local structural engineering firm in Eugene, Oregon. Work directly with Wyatt Dean, PE — new construction, ADUs, additions, remodels, and retaining walls.",
+  "founder": {
+    "@type": "Person",
+    "name": "Wyatt Dean",
+    "honorificSuffix": "PE",
+    "jobTitle": "Structural Engineer",
+    "sameAs": ["https://www.linkedin.com/in/wyatt-dean-378b7b148/"]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/wyatt-dean-378b7b148/",
+    "https://members.westernoregonbuildersassociation.com/member-directory/Details/dean-engineering-4532144"
+  ],
+  "knowsAbout": [
+    "Residential structural engineering",
+    "New home construction",
+    "ADU engineering",
+    "Middle housing",
+    "Home additions and remodels",
+    "Retaining wall design"
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
@@ -69,6 +133,7 @@
     text-transform: uppercase;
   }
   .brand-lines .sub {
+    display: block;
     color: var(--ink-soft);
     font-weight: 600;
     letter-spacing: 0.18em;
@@ -92,7 +157,7 @@
     padding: 64px 0 72px;
   }
   .hero .wrap { text-align: center; }
-  .hero h1 {
+  .hero .tagline {
     font-family: "Archivo", sans-serif;
     font-weight: 800;
     font-size: clamp(2.4rem, 6vw, 3.9rem);
@@ -102,7 +167,7 @@
     max-width: 16ch;
     margin: 0 auto;
   }
-  .hero h1 .accent { color: var(--green); }
+  .hero .tagline .accent { color: var(--green); }
   .hero p.lede {
     margin: 28px auto 0;
     max-width: 56ch;
@@ -368,10 +433,10 @@
   <div class="wrap header-row">
     <div class="brand">
       <img src="assets/logo.png?v=3" alt="Dean Engineering logo — craftsman garage" width="735" height="672">
-      <div class="brand-lines">
+      <h1 class="brand-lines">
         Residential<br>Structural<br>Engineering
-        <div class="sub">Eugene, Oregon &middot; Licensed&nbsp;PE</div>
-      </div>
+        <span class="sub">Eugene, Oregon &middot; Licensed&nbsp;PE</span>
+      </h1>
     </div>
     <div class="header-contact">
       <a href="tel:+15414102162">541-410-2162</a><br>
@@ -383,8 +448,8 @@
 <section class="hero">
   <div class="wrap">
     <div>
-      <h1>Dream it. Build it. <span class="accent">We&rsquo;ll make sure it stands.</span></h1>
-      <p class="lede">Dean Engineering is a small, local firm — and that&rsquo;s the point. When you call, you talk to <strong>the licensed engineer doing your design</strong>. No project managers, no phone tag, no waiting weeks for answers. Just an engineer who&rsquo;s genuinely excited to help you build the home you&rsquo;ve been dreaming about.</p>
+      <h2 class="tagline">Dream it. Build it. <span class="accent">We&rsquo;ll make sure it stands.</span></h2>
+      <p class="lede">Dean Engineering is a small, local structural engineering firm in Eugene, Oregon — and that&rsquo;s the point. When you call, you talk to <strong>the licensed engineer doing your design</strong>. No project managers, no phone tag, no waiting weeks for answers. Just an engineer who&rsquo;s genuinely excited to help you build the home you&rsquo;ve been dreaming about.</p>
       <div class="cta-row">
         <a class="btn btn-green" href="tel:+15414102162">Call Wyatt</a>
         <a class="btn btn-ghost" href="mailto:wyatt@deanengr.com">Send an Email</a>
@@ -428,7 +493,7 @@
       <div class="why">
         <div class="num">02</div>
         <h3>Local expertise</h3>
-        <p>Oregon codes, Oregon plans examiners, Oregon inspectors. We know how to get projects approved here.</p>
+        <p>Oregon codes, Oregon plans examiners, Oregon inspectors. We know how to get projects approved here — in Eugene, Springfield, and across Lane County.</p>
       </div>
       <div class="why">
         <div class="num">03</div>
