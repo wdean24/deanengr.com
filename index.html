@@ -318,6 +318,27 @@
     color: rgba(250, 247, 240, 0.92);
   }
   .about p + p { margin-top: 18px; }
+  .verse {
+    margin: 40px 0 0;
+    padding-left: 22px;
+    border-left: 2px solid var(--amber);
+  }
+  .about .verse p {
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--cream);
+  }
+  .verse cite {
+    display: block;
+    margin-top: 12px;
+    font-family: "Archivo", sans-serif;
+    font-style: normal;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber);
+  }
   .about-card {
     border: 1px solid rgba(250, 247, 240, 0.3);
     border-radius: 4px;
@@ -410,6 +431,12 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px;
+  }
+  footer .credit {
+    flex-basis: 100%;
+    font-size: 0.7rem;
+    letter-spacing: 0.03em;
+    color: rgba(250, 247, 240, 0.5);
   }
 
   /* ---------- responsive ---------- */
@@ -515,6 +542,10 @@
       <div>
         <p>I started Dean Engineering for a simple reason: I love houses — and the people who dream them up. Watching an idea become drawings, then a frame, then a home somebody lives their life in never gets old, and engineering the part that holds it all up is the best seat in the house.</p>
         <p>That&rsquo;s why this firm doesn&rsquo;t feel like a call center. Every project gets a licensed engineer who reads the plans, runs the numbers, and picks up the phone when you have questions. Whether you&rsquo;re a homeowner sketching an addition on a napkin or a builder who needs a beam sized by Friday — we&rsquo;d love to be part of the dream you&rsquo;re building.</p>
+        <blockquote class="verse">
+          <p>&ldquo;The rain came down, the streams rose, and the winds blew and beat against that house; yet it did not fall, because it had its foundation on the rock.&rdquo;</p>
+          <cite>Matthew 7:25 &middot; NIV</cite>
+        </blockquote>
       </div>
       <div class="about-card">
         <img class="portrait" src="assets/family.jpg" alt="Wyatt Dean with his family in an autumn Oregon field" width="1400" height="2100" loading="lazy">
@@ -546,6 +577,7 @@
   <div class="wrap">
     <span>&copy; 2026 Dean Engineering, LLC &middot; Eugene, Oregon</span>
     <span>Residential Structural Engineering &middot; Licensed&nbsp;PE</span>
+    <span class="credit">Scripture quotation taken from the Holy Bible, New International Version&reg;, NIV&reg;. Copyright &copy; 1973, 1978, 1984, 2011 by Biblica, Inc.&reg; Used by permission. All rights reserved worldwide.</span>
   </div>
 </footer>
 
